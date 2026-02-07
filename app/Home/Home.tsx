@@ -4,11 +4,11 @@ import Card from "../Card/Card";
 const Home = () => {
   return (
     <>
-     <Card type="meteo" title="Weather" text="25°C - Sunny" />
+     <Card type="meteo" title="Weather" text="25°C" tip="Time to plant some tomatoes! (April-May)"/>
       
      <h2>Suggestions</h2>
      <div className="flex flex-wrap justify-start gap-3">
-      <Card type="plant" title="Fern" text="Lorem ipsum lorem ipsum ipsum lorem ipsum ipsum lorem ipsum lorem ipsum" img="/background/ad-1.png" />
+      <Card type="plant" title="Round Tomato" text="Lorem ipsum lorem ipsum ipsum lorem ipsum ipsum lorem ipsum lorem ipsum" img="/plants/tomate-ronde.png" />
       <Card type="plant" title="Japanese Maple" text="Lorem ipsum lorem ipsum ipsum lorem ipsum ipsum lorem ipsum lorem ipsum" img="/plants/japanese-maple.png" />
      </div>
 
