@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { HiHeart, HiHome, HiMail } from "react-icons/hi";
+import { HiHome, HiMail } from "react-icons/hi";
 import { TbPlant2, TbUser } from "react-icons/tb";
 
 type MenuProps = {
@@ -22,28 +22,28 @@ const Menu = ({ active, setActive, setSearch }: MenuProps) => {
     [&_span]:text-sm [&_div]:flex [&_div]:flex-col [&_div]:items-center"
     >
       <div
-        className={active === "home" ? "text-[#36C778]" : "text-gray-400"}
+        className={active === "home" ? "text-[#074703]" : "text-gray-400"}
         onClick={() => handleMenuClick("home")}
       >
         <HiHome />
         <span>Home</span>
       </div>
       <div
-        className={active === "messages" ? "text-[#36C778]" : "text-gray-400"}
+        className={active === "messages" ? "text-[#074703]" : "text-gray-400"}
         onClick={() => handleMenuClick("messages")}
       >
         <HiMail />
         <span>Messages</span>
       </div>
       <div
-        className={active === "plants" ? "text-[#36C778]" : "text-gray-400"}
+        className={active === "plants" ? "text-[#074703]" : "text-gray-400"}
         onClick={() => handleMenuClick("plants")}
       >
         <TbPlant2 />
         <span>Plants</span>
       </div>
       <div
-        className={active === "profile" ? "text-[#36C778]" : "text-gray-400"}
+        className={active === "profile" ? "text-[#074703]" : "text-gray-400"}
         onClick={() => handleMenuClick("profile")}
       >
         <TbUser />

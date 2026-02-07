@@ -1,6 +1,6 @@
 import React from "react";
+import {  BiLogInCircle } from "react-icons/bi";
 import { FiSearch } from "react-icons/fi";
-import { IoMdNotifications } from "react-icons/io";
 import { MdGpsFixed, MdGpsNotFixed } from "react-icons/md";
 
 type NavProps = {
@@ -10,17 +10,19 @@ type NavProps = {
 const Nav = ({ location, setSearch }: NavProps) => {
   return (
     <nav className="flex flex-col pt-3">
+     
       <div className="flex items-start justify-between">
+       
         <span className="flex flex-col items-start">
           <span className="text-xs">Current Location</span>
           <span className="flex items-center">
-            <span className="text-[#36C778]">
+            <span className="text-[#074703]">
               {location ? <MdGpsFixed /> : <MdGpsNotFixed />}
             </span>
             <select
               name="location"
               id="location"
-              className="outline-none text-[0.9rem] font-semibold"
+              className="outline-none font-semibold"
             >
               <option value="Select your location">
                 {location ? location : "Select your location"}
@@ -28,8 +30,10 @@ const Nav = ({ location, setSearch }: NavProps) => {
             </select>
           </span>
         </span>
-        <span className="border rounded-md p-0.5">
-          <IoMdNotifications />
+
+        <span className="flex items-center text-sm text-white bg-[#074703]/60 px-2 py-1 rounded-md">
+          <span className="mr-1">Signin</span>
+          <BiLogInCircle/>
         </span>
       </div>
 

@@ -8,7 +8,6 @@ import Menu from "./Menu/Menu";
 export default function Home() {
   const [active, setActive] = useState("home");
   const [search, setSearch] = useState("");
-  const [notifications, setNotifications] = useState("");
   const [messages, setMessages] = useState("");
   return (
     <>

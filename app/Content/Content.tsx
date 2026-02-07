@@ -8,7 +8,7 @@ type ContentProps = {
 
 const Content = ({ type, searchQuery }: ContentProps) => {
   return (
-    <div className="w-full min-h-screen mt-7">
+    <div className="w-full min-h-screen mt-7 mb-30">
       {searchQuery ? (
         <div>Résultats de recherche pour : {searchQuery}</div>
       ) : (
