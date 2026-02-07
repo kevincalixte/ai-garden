@@ -12,7 +12,6 @@ AI Garden est un assistant intelligent basee sur Mistral pour repondre aux quest
 - **API Meteo**: Integration de donnees meteorologiques pour adapter les recommandations
 - **Messagerie communautaire**: Salons de discussion thematiques sur les plantes
 - **Moderation IA**: L'assistant peut agir comme moderateur dans les salons
-- **Notifications**: Systeme d'alertes pour les rappels d'entretien et activites communautaires
 
 ## Technologies utilisees
 
