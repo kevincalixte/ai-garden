@@ -17,9 +17,9 @@ const Menu = ({ active, setActive, setSearch }: MenuProps) => {
   
   return (
     <nav
-      className="flex justify-around fixed w-[90%] shadow-2xl mb-3 bottom-0  p-5 text-2xl 
+      className="flex justify-around fixed w-[90%] shadow-2xl mb-3 bottom-0 p-5 text-2xl 
     rounded-3xl bg-white
-    [&_span]:text-sm [&_div]:flex [&_div]:flex-col [&_div]:items-center"
+    [&_span]:text-sm [&_div]:cursor-pointer [&_div]:flex [&_div]:flex-col [&_div]:items-center"
     >
       <div
         className={active === "home" ? "text-[#074703]" : "text-gray-400"}

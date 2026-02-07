@@ -16,7 +16,7 @@ const Ad = ({ title, text, action, img }: AdProps) => {
         <span className="text-sm font-semibold">{title}</span>
         <span className="text-xs pt-2">{text}</span>
       </span>
-      <span className="bg-[#074703] rounded-sm text-xs p-1">{action}</span>
+      <span className="bg-[#074703] cursor-pointer rounded-sm text-xs p-1">{action}</span>
     </div>
   );
 };

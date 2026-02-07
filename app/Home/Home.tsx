@@ -6,19 +6,14 @@ const Home = () => {
     <>
      <Card type="meteo" title="Weather" text="25°C - Sunny" />
       
-     <div className="flex flex-wrap justify-between">
+     <h2>Suggestions</h2>
+     <div className="flex flex-wrap justify-start gap-3">
       <Card type="plant" title="Fern" text="Lorem ipsum lorem ipsum ipsum lorem ipsum ipsum lorem ipsum lorem ipsum" img="/background/ad-1.png" />
-      <Card type="plant" title="Fern" text="Lorem ipsum lorem ipsum ipsum lorem ipsum ipsum lorem ipsum lorem ipsum" img="/background/ad-1.png" />
-      <Card type="plant" title="Fern" text="Lorem ipsum lorem ipsum ipsum lorem ipsum ipsum lorem ipsum lorem ipsum" img="/background/ad-1.png" />
-      <Card type="plant" title="Fern" text="Lorem ipsum lorem ipsum ipsum lorem ipsum ipsum lorem ipsum lorem ipsum" img="/background/ad-1.png" />
-      <Card type="plant" title="Fern" text="Lorem ipsum lorem ipsum ipsum lorem ipsum ipsum lorem ipsum lorem ipsum" img="/background/ad-1.png" />
-      <Card type="plant" title="Fern" text="Lorem ipsum lorem ipsum ipsum lorem ipsum ipsum lorem ipsum lorem ipsum" img="/background/ad-1.png" />
-      <Card type="plant" title="Fern" text="Lorem ipsum lorem ipsum ipsum lorem ipsum ipsum lorem ipsum lorem ipsum" img="/background/ad-1.png" />
-      <Card type="plant" title="Fern" text="Lorem ipsum lorem ipsum ipsum lorem ipsum ipsum lorem ipsum lorem ipsum" img="/background/ad-1.png" />
-      <Card type="plant" title="Fern" text="Lorem ipsum lorem ipsum ipsum lorem ipsum ipsum lorem ipsum lorem ipsum" img="/background/ad-1.png" />
+      <Card type="plant" title="Japanese Maple" text="Lorem ipsum lorem ipsum ipsum lorem ipsum ipsum lorem ipsum lorem ipsum" img="/plants/japanese-maple.png" />
      </div>
 
-     <div className="flex flex-wrap justify-between">
+     <h2>Tips</h2>
+     <div className="flex flex-wrap justify-start gap-3">
       <Card type="tip" title="How to water your plant?" />
       <Card type="tip" title="Best light for succulents" />
       <Card type="tip" title="When to repot a plant" />
@@ -26,19 +21,6 @@ const Home = () => {
       <Card type="tip" title="Fertilizing tips" />
       <Card type="tip" title="Dealing with pests" />
      </div>
-
-     <div className="flex flex-wrap justify-between">
-      <Card type="suggestion" title="Discover - Japanese maple"/>
-      <Card type="suggestion" title="Discover - Japanese maple"/>
-      <Card type="suggestion" title="Discover - Japanese maple"/>
-     </div>
-
-     <div className="flex flex-wrap justify-between">
-      <Card type="room" title="#bugs problems" text="4 people in" />
-      <Card type="room" title="#can someone help me?" text="1 people in"/>
-      <Card type="room" title="#hi everyone! " text="53 people in" />
-     </div>
-
     </>
   );
 };

@@ -32,7 +32,7 @@ const Nav = ({ location, setSearch }: NavProps) => {
         </span>
 
         <span className="flex items-center text-sm text-white bg-[#074703] px-2 py-1 rounded-md">
-          <span className="mr-1">Signin</span>
+          <span className="mr-1 cursor-pointer">Signin</span>
           <BiLogInCircle/>
         </span>
       </div>
