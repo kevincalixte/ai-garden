@@ -1,18 +1,31 @@
 import React from "react";
 import { BsSunFill } from "react-icons/bs";
 import { CiCircleRemove } from "react-icons/ci";
+import { usePlant } from "../context/PlantContext";
 
 type CardProps = {
-  type?: "meteo" | "plant" | "tip" | "suggestion" | "room"| "default";
+  type?: "meteo" | "plant" | "tip" | "suggestion" | "room" | "default";
   title?: string;
   text?: string;
   img?: string;
   tip?: string;
   menu?: string;
   onRemove?: () => void;
+  setActive?: (value: string) => void;
 };
 
-const Card = ({ type="default", title, text, img, tip, menu, onRemove }: CardProps) => {
+const Card = ({
+  type = "default",
+  title,
+  text,
+  img,
+  tip,
+  menu,
+  onRemove,
+  setActive,
+}: CardProps) => {
+
+  const { setPlantData } = usePlant();
   const cardStyles = {
     meteo: {
       style:
@@ -31,10 +44,10 @@ const Card = ({ type="default", title, text, img, tip, menu, onRemove }: CardPro
       style: "h-20 bg-black/80",
     },
 
-  // <Card type="default" title="x" text="x" img="x"/>
-  default: {
-    style:"h-20 bg-gray/200"
-  }
+    // <Card type="default" title="x" text="x" img="x"/>
+    default: {
+      style: "h-20 bg-gray/200",
+    },
   };
 
   const currentStyle = cardStyles[type];
@@ -46,6 +59,16 @@ const Card = ({ type="default", title, text, img, tip, menu, onRemove }: CardPro
         ${baseStyle} ${type === "meteo" ? "flex items-center justify-around" : "p-3"} relative
         rounded-xl text-white mt-4 hover:scale-101 cursor-pointer ${currentStyle.style}`}
       style={img ? { backgroundImage: `url(/assets/img${img})` } : undefined}
+      onClick={() => {
+        if (type === "plant" && setActive) {
+          setPlantData({
+            title: title ?? "Unknown plant",
+            text: text ?? "",
+            img: img ?? "",
+          });
+          setActive("plant");
+        }
+      }}
     >
       <div className="flex flex-col justify-center  drop-shadow-[0_4px_8px_rgba(0,0,0,0.1)]">
         {title && (
@@ -57,18 +80,15 @@ const Card = ({ type="default", title, text, img, tip, menu, onRemove }: CardPro
         </span>
       </div>
       {type === "meteo" && (
-        <span className="text-sm text-center w-1/2">
-          {tip}
-        </span>
+        <span className="text-sm text-center w-1/2">{tip}</span>
       )}
       {type === "plant" && menu === "plant" && (
         <CiCircleRemove
-          className="absolute top-0 right-0 text-xl m-1 cursor-pointer hover:text-red-500"
+          className="absolute top-0 right-0 text-2xl m-1 cursor-pointer hover:text-red-500"
           onClick={onRemove}
         />
       )}
     </div>
   );
 };
-
 export default Card;
